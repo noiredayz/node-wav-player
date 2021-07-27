@@ -124,6 +124,9 @@ setTimeout(() => {
 ---------------------------------------
 ## <a id="Release-Note">Release Note</a>
 
+* v0.2.1 (2021-07-17)
+  Forked the project with plans to expand support for other OS'. Dead project? NOIDONTTHINKSO
+  Added a trivial patch by Kiraseira (deleted github account) to support sound playback using aplay under FreeBSD and DragonflyBSD
 * v0.2.0 (2020-10-27)
   Added error catching to spawn child process (Thanks to [@Tmp2k](https://github.com/Tmp2k), [#7](https://github.com/futomi/node-wav-player/pull/7))
 * v0.1.0 (2018-10-26)
@@ -145,6 +148,7 @@ setTimeout(() => {
 The MIT License (MIT)
 
 Copyright (c) 2018 - 2020 Futomi Hatano
+Copyright (c) 2021 Noiredayz
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
