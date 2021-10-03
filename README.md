@@ -16,6 +16,8 @@ This module can plays a wav file on:
     * [Raspbian Strech with Desktop](https://www.raspberrypi.org/downloads/raspbian/)
 * FreeBSD and DragonflyBSD
   * Just like under Linux you can use ALSA's `aplay` which is in the `alsa-utils` compatibility package
+* OpenBSD
+  * Wav files are played using [aucat](https://www.openbsd.org/faq/faq13.html#playaudio)
 
 Basically you don't have to install any additional libraries in most environments.
 
@@ -124,6 +126,7 @@ setTimeout(() => {
 ---------------------------------------
 ## <a id="Release-Note">Release Note</a>
 
+* v0.2.2 (2021-10-03) Added OpenBSD support using [aucat](https://www.openbsd.org/faq/faq13.html#playaudio)
 * v0.2.1 (2021-07-17)
   Forked the project with plans to expand support for other OS'. Dead project? NOIDONTTHINKSO
   Added a trivial patch by Kiraseira (deleted github account) to support sound playback using aplay under FreeBSD and DragonflyBSD
