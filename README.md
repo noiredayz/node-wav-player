@@ -18,8 +18,9 @@ This module can plays a wav file on:
   * Just like under Linux you can use ALSA's `aplay` which is in the `alsa-utils` compatibility package
 * OpenBSD
   * Wav files are played using [aucat](https://www.openbsd.org/faq/faq13.html#playaudio)
+* **NEW** Any platform: specify any application to play sounds. This lets you play almost anything (incl. ogg, flac, mp4, m4a) using mpv for example!
 
-Basically you don't have to install any additional libraries in most environments.
+Basically you don't have to install any additional libraries in most environments or you can use what you already have or want to use.
 
 Though this module is intended to play a wav file, it probably can play some audio formats. That depends on the OS. For example, a mp3 file could be played on Mac OS X. But at least on Windows, the supported audio format is only wav.
 
@@ -86,6 +87,7 @@ Property | Type    | Required | Description
 `path`   | String  | Required | Path of a wav file (e.g., `"./speech.wav"`)
 `loop`   | Boolean | Optional | If `true`, the wave file will be played repeatedly until the [`stop()`](#WavPlayer-stop-method") method is called. The default value is `false`.
 `sync`   | Boolean | Optional | If `true`, this method calls the `resove()` after finishing to play the wav file. Otherwise, if `false`, this method calles the `resolve()` immediately after starting to play the wav file. The default value is `false`. If the `loop` is set to `true`, this parameter is ignored (i.e., this parameter is set to the default value `false` ).
+`sndPlayer`| String | Optional | Path to an external application (such as mpv or mplayer) to play your sounds. The default sound players used if not set and error is thrown if there is none for your platform.
 
 If you want to wait for the end of the audio, you can set the `sync` to `true` as follows:
 
@@ -126,6 +128,7 @@ setTimeout(() => {
 ---------------------------------------
 ## <a id="Release-Note">Release Note</a>
 
+* v0.3.0. (2022-06-05) Added support play sounds using any application. This makes the module work on virtuall any platform that is capable of playing audio.
 * v0.2.2 (2021-10-03) Added OpenBSD support using [aucat](https://www.openbsd.org/faq/faq13.html#playaudio)
 * v0.2.1 (2021-07-17)
   Forked the project with plans to expand support for other OS'. Dead project? NOIDONTTHINKSO
