@@ -1,7 +1,7 @@
 node-wav-player
 ===============
 
-The node-wav-player is a Node.js module which allows you to play a wav file on the host computer. It supports Windows 10, MacOS X, and some Linux distros.
+The node-wav-player is a Node.js module which allows you to play a wav file on the host computer.
 
 This module can plays a wav file on:
 
@@ -22,7 +22,7 @@ This module can plays a wav file on:
 
 Basically you don't have to install any additional libraries in most environments or you can use what you already have or want to use.
 
-Though this module is intended to play a wav file, it probably can play some audio formats. That depends on the OS. For example, a mp3 file could be played on Mac OS X. But at least on Windows, the supported audio format is only wav.
+Most default methods only can play plain wav files (the Mac method also supports mp3). For other formats you can use the external player.
 
 ## Dependencies
 
@@ -128,7 +128,7 @@ setTimeout(() => {
 ---------------------------------------
 ## <a id="Release-Note">Release Note</a>
 
-* v0.3.0. (2022-06-05) Added support play sounds using any application. This makes the module work on virtuall any platform that is capable of playing audio.
+* v0.3.0. (2022-06-05) Added support for playing sounds using any application. This makes the module work on virtually any platform that is capable of playing audio.
 * v0.2.2 (2021-10-03) Added OpenBSD support using [aucat](https://www.openbsd.org/faq/faq13.html#playaudio)
 * v0.2.1 (2021-07-17)
   Forked the project with plans to expand support for other OS'. Dead project? NOIDONTTHINKSO
